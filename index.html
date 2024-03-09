@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/marquee.css" />
+  <title>Neon Tetromino</title>
+</head>
+<body>
+  <div id="header-bar">
+    <div id="menu-handle"><span id="menu-icon">&#8801;</span> Neon</div>
+    <div id="score-display">0</div>
+  </div>
+  <div id="pause-menu" class="panel-hide">
+    <h2><b>CONTROLS</b></h2>
+    <div class="control-toggle">
+      <a class="hide" href="javascript:arrowToggle();"></a>
+      <object id="arrows" type="image/svg+xml" data="img/arrows.svg">Arrows</object>
+    </div>
+    <div class="control-toggle">
+      <a class="hide" href="javascript:swipeToggle();"></a>
+      <object id="swipe" type="image/svg+xml" data="img/swipe.svg">Swipe</object>
+    </div>
+    <hr style="width: 80%; border: 2px solid #FFF;" />
+    <div class="menu-action">
+      <a class="hide" href="javascript:saveGame();"></a>
+      <object id="save-icon" type="image/svg+xml" data="img/save.svg">Save</object>
+    </div>
+    <div class="menu-action">
+    <a class="hide" href="javascript:endGame();"></a>
+    <object id="logout-icon" type="image/svg+xml" data="img/logout.svg">End Game</object>
+    </div>
+  </div>
+  <div id="container">
+    <canvas id="game">
+      If you had a modern browser you could be playing tetris right now.
+    </canvas>
+  </div>
+  <div id="tap-controls-container">
+    <a href="javascript:void(null);" id="control-tap-rotate"><img src="img/rotate-clockwise-white.png" alt="rotate" class="tap-control" /></a><br>
+    <img id="control-tap-left" src="img/left-white.png" alt="left" class="tap-control" />
+    <img id="control-tap-down" src="img/down-white.png" alt="down" class="tap-control" />
+    <img id="control-tap-right" src="img/right-white.png" alt="right" class="tap-control" />
+  </div>
+  <div id="start" class="menu slide-in">
+    <h1 id="marquee" class="marquee">
+      <span>N</span>
+      <span>E</span>
+      <span>O</span>
+      <span>N</span>
+    </h1>
+    <h1>TETROMINO</h1>
+  </h1>
+  <p>Use the arrow buttons or swipe.  "Up" (button or swipe) rotates the active block.</p>
+  <form>
+    <input name="width" type="text" class="dimensions" size="2" title="width" value=12> X
+    <input name="height" type="text" class="dimensions" size="2" title="height" value=24>
+  </form><br>
+  <img src="img/contract.png" alt="smaller" class="size-button smaller" />
+  <img src="img/expand.png" alt="bigger" class="size-button bigger" /><br>
+  <a class="button blue" href="javascript:startGame('resume');">RESUME</a>
+  <a class="button blue" href="javascript:startGame('normal');">CLASSIC</a><br>
+  <a class="button blue" href="javascript:startGame('night');">LIGHTS OUT</a>
+  <a class="button blue" href="javascript:startGame('slide');">IT'S ELECTRIC</a><br>
+  <a class="button blue" href="javascript:startGame('speed');">SPEED</a>
+</div>
+
+<div id="notification" class="notification hide"></div>
+
+<div id="gameover" class="menu slide-out">
+  <h1>GAME OVER!</h1>
+  <h2>High Score:<span id="high-score" class="score"></span></h2>
+  <h2>Score:<span id="final-score" class="score"></span></h2>
+  <h2>Retry?</h2>
+  <form>
+    <input name="width" type="text" class="dimensions" size="2" title="width" value=12> X
+    <input name="height" type="text" class="dimensions" size="2" title="height" value=24>
+  </form><br>
+  <img src="img/contract.png" alt="smaller" class="size-button smaller" />
+  <img src="img/expand.png" alt="bigger" class="size-button bigger" /><br>
+  <a class="button blue" href="javascript:startGame('resume');">RESUME</a>
+  <a class="button blue" href="javascript:startGame('normal');">CLASSIC</a><br>
+  <a class="button blue" href="javascript:startGame('night');">LIGHTS OUT</a>
+  <a class="button blue" href="javascript:startGame('slide');">IT'S ELECTRIC</a><br>
+  <a class="button blue" href="javascript:startGame('speed');">SPEED</a>
+</div>
+<!--<script type="text/javascript" src="cordova.js"></script>-->
+<script type="text/javascript" src="js/tetris.js"></script>
+<script type="text/javascript" src="js/controls/keyboard.js"></script>
+<script type="text/javascript" src="js/controls/touch.js"></script>
+<script type="text/javascript" src="js/menus.js"></script>
+</body>
+</html>

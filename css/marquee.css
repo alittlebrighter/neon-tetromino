@@ -1,0 +1,107 @@
+/* 
+Concept from a CodePen by Roger Lemon
+find his original work here: http://codepen.io/rlemon/pen/kIiDE?editors=001
+*/
+@import url(http://fonts.googleapis.com/css?family=Advent+Pro:700);
+@-webkit-keyframes turnonlights {
+    0%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    1%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    4%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    7%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    8%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    12%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    22%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    23%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    26%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    28%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    34%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    36%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    42%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    55%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    60%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    63%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    67%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    72%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    73%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    76%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    78%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    84%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    86%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    96%    { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    100%    { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+}
+@-moz-keyframes turnonlights {
+    0%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    1%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    4%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    7%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    8%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    12%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    22%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    23%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    26%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    28%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    34%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    36%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    42%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    55%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    60%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    63%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    67%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    72%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    73%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    76%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    78%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    84%        { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+    86%        { color: #6d5669; text-shadow: 0 0 3px #635861, 0 0 5px #635861; }
+    96%    { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 17px #ff00de, 0 0 38px #ff00de}
+    100%    { color: #ff55de; text-shadow: 0 0 5px #ff99de, 0 0 10px #ff99de, 0 0 15px #ff99de, 0 0 20px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de; }
+}
+/*
+body {
+ background: #474747 url(http://line25.com/wp-content/uploads/2009/letterpress/demo/bg.png);
+ padding-top: 5em;
+ font-family: "Advent Pro";
+}
+*/
+.title {
+    color: #222;
+    text-align: center;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    font-size: 2.6em;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 3px #555;
+}
+/*.content {
+    position: relative;
+    width: 700px;
+    padding: 2em;
+    margin: 1em auto;
+    background-color: #222;
+    border-radius: 12px;   
+}
+*/
+.marquee > span {
+    text-align: center;
+    margin: 0.5em auto;
+    font-family: "Advent Pro";
+    font-weight: 700;
+    font-size: 8.6em;
+    text-transform: uppercase;
+    color: #6d5669;
+    text-shadow: 0 0 3px #635861, 0 0 5px #635861;
+    padding: 0;
+    border: none;
+}
+
+.animate {
+    -webkit-animation-name: turnonlights;
+    -webkit-animation-duration: 3.0s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: steps(2, start);
+    -moz-animation-name: turnonlights;
+    -moz-animation-duration: 3.0s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-timing-function: steps(2, start);      
+}
